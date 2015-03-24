@@ -1,0 +1,9 @@
+name: Haml
+author:
+    name: Giovanni Barillari
+    email: gi0baro@d4net.org
+github: gi0baro/weppy-haml
+pypi: weppy-Haml
+version: 0.2
+bugtracker: https://github.com/gi0baro/weppy-haml/issues
+license: BSD
