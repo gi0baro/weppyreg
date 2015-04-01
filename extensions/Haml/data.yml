@@ -2,6 +2,7 @@ name: Haml
 author:
     name: Giovanni Barillari
     email: gi0baro@d4net.org
+description: Haml syntax for weppy templates
 github: gi0baro/weppy-haml
 pypi: weppy-Haml
 version: 0.2

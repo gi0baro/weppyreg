@@ -1,4 +1,4 @@
-weppy-Haml is provides a [Haml](http://haml.info) like syntax for templates. This is not a template engine but a compiler which converts haml files to html weppy templates.
+weppy-Haml provides a [Haml](http://haml.info) like syntax for templates. This is not a template engine but a compiler which converts haml files to html weppy templates.
 
 ## Haml-like syntax
 
