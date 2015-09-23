@@ -105,3 +105,13 @@ app.config.templates_auto_reload = True
 app.config.Haml.auto_reload = True
 app.use_extension(Haml)
 ```
+
+## Suggested .gitignore
+
+If you're using git version control system for your application, you'd better add to your *.gitignore* file:
+
+```
+*.haml.html
+```
+
+so you won't track the generated html files from the haml ones.

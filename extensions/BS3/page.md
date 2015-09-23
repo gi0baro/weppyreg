@@ -59,3 +59,17 @@ app.use_extension(BS3)
 
 > **Warning**   
 > When you set configuration values for the extension, ensure to do that **before** adding the extension to your application.
+
+## Suggested .gitignore
+
+If you're using git version control system for your application, you'd better add the *bs3* folder to your *.gitignore* file:
+
+```
+static/bs3/*
+```
+
+and if you're using a [package pattern](http://weppy.org/docs/latest/patterns):
+
+```
+yourpackagename/static/bs3/*
+```
