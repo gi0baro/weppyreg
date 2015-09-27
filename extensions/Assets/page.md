@@ -14,6 +14,18 @@ from weppy_assets import Assets
 app.use_extension(Assets)
 ```
 
+weppy-Assets is designed in order to work *out of the box*. This means that it will install quite a lot of dependencies in order to allow you use:
+
+- coffescript files
+- sass and scss files
+
+without compiling them outside of weppy.
+
+There's only one caveat you should take care of regarding coffeescript files, since there's no a pure python implementation to parse them. You will need one of the following external dependencies in order to get them compiled:
+
+- *v8 javascript engine* which is packed inside *node.js*. Just install node on your machine and you will be good.
+- *coffee* binary file installed with the coffeescript ruby gem
+
 ## Configuration
 
 weppy-Assets has these configuration options:
@@ -49,14 +61,17 @@ js = app.ext.Assets.js(
 css = app.ext.Assets.css(
     'css/base.css',
     'css/theme.sass',
+    'css/partial.scss',
     output="all.css").minify()
 
 app.ext.Assets.register('base_js', js)
 app.ext.Assets.register('base_css', css)
 ```
 
-As you can see, you should threat separately javascript assets and css assets, but the syntax is always the same. You create a *bundle* calling the `Assets.js` or `Assets.css` methods, with the list of files to include and the output name of the resulting file.   
+As you can see, you should threat separately javascript assets and css assets, but the syntax is always the same. You can create a *bundle* of assets calling the `Assets.js` or `Assets.css` methods, with the list of files to include and the output name of the resulting file.   
 Both the object resulting from the methods have a `minify` method, which will minify all the contents of the resulting output file.
+
+As in the given example, you can pack together files with different extensions, like both *.js* and *.coffee* for the javascript and *.css*, *.sass*, *.scss* for the styles. The extension will take care of them, applying the appropriate filters on the files which need them.
 
 Once you have defined your bundles, you can register them to your application using the `Assets.register` method, where the first parameter is the identifier of your bundle, and the second paramtere is the bundle you've just declared.
 
