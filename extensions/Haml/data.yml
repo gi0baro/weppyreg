@@ -5,6 +5,6 @@ author:
 description: Haml syntax for weppy templates
 github: gi0baro/weppy-haml
 pypi: weppy-Haml
-version: 0.2
+version: 0.3
 bugtracker: https://github.com/gi0baro/weppy-haml/issues
 license: BSD
