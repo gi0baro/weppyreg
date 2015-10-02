@@ -1,0 +1,10 @@
+name: Assets
+author:
+    name: Giovanni Barillari
+    email: gi0baro@d4net.org
+description: Assets pipeline management for weppy
+github: gi0baro/weppy-assets
+pypi: weppy-Assets
+version: 0.3
+bugtracker: https://github.com/gi0baro/weppy-assets/issues
+license: BSD

@@ -1,0 +1,10 @@
+name: BS3
+author:
+    name: Giovanni Barillari
+    email: gi0baro@d4net.org
+description: Bootstrap3 integration for weppy
+github: gi0baro/weppy-bs3
+pypi: weppy-BS3
+version: 0.4
+bugtracker: https://github.com/gi0baro/weppy-bs3/issues
+license: BSD
