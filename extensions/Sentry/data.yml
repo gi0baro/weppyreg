@@ -1,0 +1,10 @@
+name: Sentry
+author:
+    name: Giovanni Barillari
+    email: gi0baro@d4net.org
+description: Sentry integration for weppy
+github: gi0baro/weppy-sentry
+pypi: weppy-Sentry
+version: 0.1
+bugtracker: https://github.com/gi0baro/weppy-sentry/issues
+license: BSD
