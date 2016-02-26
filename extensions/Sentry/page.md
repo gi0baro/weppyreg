@@ -43,15 +43,9 @@ app.config_from_yaml('sentry.yml', 'Sentry')
 app.use_extension(Sentry)
 ```
 
-When the `auto_load` parameter is set to `True`, the extension will insert the extension handler into the first position of your application handlers. In order to avoid overrides, you should enable the extension after you configured all your handlers.
+When the `auto_load` parameter is set to `True`, the extension will add an handler into your application, that will log any uncaught exception in your application code and your templates.
 
-```python
-app.common_handlers = [db.handler]
-
-app.use_extension(Sentry)
-```
-
-On the countrary, if you want to manually add the handler to your application handlers, you should set the `auto_load` parameter to `False`, init the extension and then add the handler to your application's ones:
+If you want to manually set the handler into your application handlers, you should set the `auto_load` parameter to `False`, init the extension and then add the handler to your application's ones. Mind that, using this configuration, Sentry won't be able to track errors in your templates:
 
 ```python
 app.config.Sentry.auto_load = False
@@ -60,7 +54,7 @@ app.use_extension(Sentry)
 app.common_handlers = [app.ext.Sentry.handler]
 ```
 
-If you don't want the error tracking on exception, just set the parameter to `False` and don't add the handler to your application.
+Finally, if you just don't want the error tracking on exceptions, just set the parameter to `False` and don't add the handler to your application.
 
 ## Manual usage
 

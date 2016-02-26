@@ -5,6 +5,6 @@ author:
 description: Sentry integration for weppy
 github: gi0baro/weppy-sentry
 pypi: weppy-Sentry
-version: 0.1
+version: 0.2
 bugtracker: https://github.com/gi0baro/weppy-sentry/issues
 license: BSD
