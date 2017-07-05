@@ -43,18 +43,18 @@ app.config_from_yaml('sentry.yml', 'Sentry')
 app.use_extension(Sentry)
 ```
 
-When the `auto_load` parameter is set to `True`, the extension will add an handler into your application, that will log any uncaught exception in your application code and your templates.
+When the `auto_load` parameter is set to `True`, the extension will add a pipe into your application pipeline, that will log any uncaught exception in your application code and your templates.
 
-If you want to manually set the handler into your application handlers, you should set the `auto_load` parameter to `False`, init the extension and then add the handler to your application's ones. Mind that, using this configuration, Sentry won't be able to track errors in your templates:
+If you want to manually set the pipe into your application pipeline, you should set the `auto_load` parameter to `False`, init the extension and then add the pipe to your application's ones. Mind that, using this configuration, Sentry won't be able to track errors in your templates:
 
 ```python
 app.config.Sentry.auto_load = False
 app.use_extension(Sentry)
 
-app.common_handlers = [app.ext.Sentry.handler]
+app.pipeline = [app.ext.Sentry.pipe]
 ```
 
-Finally, if you just don't want the error tracking on exceptions, just set the parameter to `False` and don't add the handler to your application.
+Finally, if you just don't want the error tracking on exceptions, just set the parameter to `False` and don't add the pipe to your application.
 
 ## Manual usage
 
