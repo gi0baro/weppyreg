@@ -5,6 +5,6 @@ author:
 description: Bootstrap3 integration for weppy
 github: gi0baro/weppy-bs3
 pypi: weppy-BS3
-version: 0.4
+version: 0.6
 bugtracker: https://github.com/gi0baro/weppy-bs3/issues
 license: BSD
