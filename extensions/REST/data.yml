@@ -1,0 +1,10 @@
+name: REST
+author:
+    name: Giovanni Barillari
+    email: gi0baro@d4net.org
+description: REST extension for weppy
+github: gi0baro/weppy-REST
+pypi: weppy-REST
+version: 0.4.2
+bugtracker: https://github.com/gi0baro/weppy-REST/issues
+license: BSD
